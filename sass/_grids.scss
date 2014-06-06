@@ -1,0 +1,57 @@
+// Requirements
+// ============
+
+@import "susy";
+
+$susy: (
+    columns: 12,
+    gutters: 1/4,
+    global-box-sizing: border-box,
+);
+
+.container {
+    @include container(960px center static);
+    
+}
+
+.ag1 {
+  @include span(2 of 10);
+}
+
+.ag2 {
+  @include span(6 of 10);
+  @include clearfix; 
+}
+
+.ag3 {
+  @include span(2 of 10 last);
+}
+
+.ag4 {
+  @include span(3 of 6);
+}
+
+.ag5 {
+  @include span(3 of 6 last);
+}
+.ag6 {
+  @include span(2 of 6);
+}
+
+.ag7 {
+  @include span(4 of 6 last);
+  @include clearfix;
+}
+.ag8 {
+  @include span(2 of 4);
+}
+
+.ag9 {
+  @include span(2 of 4 last);
+}
+
+.ag10 {
+  clear: both;
+  // Alternatively, you can now use the span mixin with the full keyword to tell Susy this should be a 100% width 
+  // @include span(full);
+}
